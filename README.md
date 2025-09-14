@@ -2,13 +2,13 @@ Stock Analysis & Prediction Dashboard 📈
 
 🚀 [View the Live Application Here!](https://stock-analysis-and-prediction-apooorv19.streamlit.app)
 
-![CAPM Page](https://github.com/apooorv19/stock-analysis-and-prediction/blob/main/CAPM%20Page.png?raw=true)
+![CAPM Page](https://github.com/apooorv19/stock-analysis-and-prediction/blob/main/screenshots/CAPM%20Page.png)
 
-![Stock Analysis Page](https://github.com/apooorv19/stock-analysis-and-prediction/blob/main/Stock%20Analysis%20Page.png?raw=true)
+![Stock Analysis Page](https://github.com/apooorv19/stock-analysis-and-prediction/blob/main/screenshots/Stock%20Analysis%20Page.png?raw=true)
 
-![Stock Analysis Visualization Page](https://github.com/apooorv19/stock-analysis-and-prediction/blob/main/Stock%20Analysis%20Visulaization%20Page.png?raw=true)
+![Stock Analysis Visualization Page](https://github.com/apooorv19/stock-analysis-and-prediction/blob/main/screenshots/Stock%20Analysis%20Visulaization%20Page.png?raw=true)
 
-![Stock Prediction Page](https://github.com/apooorv19/stock-analysis-and-prediction/blob/main/Stock%20Prediction%20Page.png?raw=true)
+![Stock Prediction Page](https://github.com/apooorv19/stock-analysis-and-prediction/blob/main/screenshots/Stock%20Prediction%20Page.png?raw=true)
 
 What Can You Do With This App?
 
