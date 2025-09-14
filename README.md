@@ -26,13 +26,13 @@ The project is organized in a modular way that is easy to understand and maintai
 
 ```
 trading-app/
-│── Trading_App.py         # Main homepage of the app
-│── requirements.txt       # List of necessary Python libraries
+│── Trading_App.py              # Main homepage of the app
+│── requirements.txt            # List of necessary Python libraries
 │
-├── pages/                 # Contains all app pages
-│   ├── 1_Stock_Analysis.py    # "Report Card" page
-│   ├── 2_Stock_Prediction.py  # "Forecast" page
-│   └── 3_CAPM_Analysis.py     # "Risk vs. Reward" page
+├── pages/                      # Contains all app pages
+│   ├── 1_Stock_Analysis.py    
+│   ├── 2_Stock_Prediction.py  
+│   └── 3_CAPM_Analysis.py    
 │
 ├── utils/                 # Helper functions
 │   ├── __init__.py        # Makes 'utils' a package
