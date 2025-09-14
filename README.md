@@ -1,4 +1,5 @@
 Stock Analysis & Prediction Dashboard 📈
+
 🚀 [View the Live Application Here!](https://stock-analysis-and-prediction-apooorv19.streamlit.app/)
 
 What Can You Do With This App?
