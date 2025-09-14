@@ -2,13 +2,13 @@ Stock Analysis & Prediction Dashboard 📈
 
 🚀 [View the Live Application Here!](https://stock-analysis-and-prediction-apooorv19.streamlit.app/)
 
-![CAPM Page](https://imgbox.com/07ePaCgB)
+![](https://imgbox.com/07ePaCgB)
 
-![Stock Analysis Page](https://imgbox.com/37shTeym)
+![](https://imgbox.com/37shTeym)
 
-![Stock Analysis Visulaization Page](https://imgbox.com/rLo25e4M)
+![](https://imgbox.com/rLo25e4M)
 
-![Stock Prediction Page](https://imgbox.com/aOR4mDnz)
+![](https://imgbox.com/aOR4mDnz)
 
 What Can You Do With This App?
 
