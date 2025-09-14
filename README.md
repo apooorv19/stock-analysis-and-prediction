@@ -1,52 +1,35 @@
 Stock Analysis & Prediction Dashboard 📈
+🚀 View the Live Application Here![https://stock-analysis-and-prediction-apooorv19.streamlit.app/]
+What Can You Do With This App?
 
-🚀 View the Live Application Here![https://stock-analysis-and-prediction-apooorv19.streamlit.app/Stock_Prediction]
+I've split the app into three simple tools:
 
+1. 📊 Stock Analysis 
 
-[https://ibb.co/KcF5RXVz]
-[https://ibb.co/JwdZRFm7]
-[https://ibb.co/ymQ3XcCb]
-[https://ibb.co/5xhT92tm]
-        
+2. 🔮 Stock Prediction
 
-What This Project Does
+3. 💹 CAPM Analysis
 
-This application is a complete toolkit for stock market analysis. It has three main pages:
+For Developers: How to Run This on Your Computer
 
-    📊 Stock Analysis: Get real-time data and see financial charts (like Candlestick, RSI, MACD) for any stock.
+If you're a fellow coder and want to run this project yourself, here’s how:
+1. Download the Code
 
-    🔮 Stock Prediction: Uses a forecasting model to predict what the stock price might be for the next 30 days.
+This command copies all the project files to your machine.
 
-    💹 CAPM Analysis: Calculates the risk (Beta) and expected return for stocks based on a popular financial model.
+git clone [https://github.com/apooorv19/Stock-Analysis-and-Prediction.git](https://github.com/apooorv19/Stock-Analysis-and-Prediction.git)
+cd Stock-Analysis-and-Prediction
 
-Technologies I Used
+2. Install the Required Tools
 
-    Language: Python
-
-    Web Framework: Streamlit (to build the web app)
-
-    Data & Finance: Pandas, yfinance, statsmodels (for the prediction model)
-
-    Charts: Plotly (for the interactive graphs)
-
-How to Run This Project on Your Computer
-1. Clone the Repository
-
-This downloads the code to your computer.
-
-git clone [https://github.com/apooorv19/stock-analysis-and-prediction.git](https://github.com/apooorv19/stock-analysis-and-prediction)
-cd stock-analysis-and-prediction
-
-2. Install the Required Libraries
-
-This command reads the requirements.txt file and installs everything the app needs to run.
+This single command installs all the libraries the project needs to work.
 
 pip install -r requirements.txt
 
 3. Run the App
 
-This command starts the web application.
+This command will start the application on your computer.
 
 streamlit run Trading_App.py
 
-Disclaimer: This is an educational project and does not constitute financial advice.
+Disclaimer: This is an educational project created to showcase programming and data analysis skills. The information and predictions provided are not financial advice.
