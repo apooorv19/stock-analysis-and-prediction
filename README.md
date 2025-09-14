@@ -25,20 +25,20 @@ I've split the app into three simple tools:
 The project is organized in a modular way that is easy to understand and maintain. This is the standard structure for a multi-page Streamlit application.
 
 trading-app/
+│── Trading_App.py         # Main homepage of the app
+│── requirements.txt       # List of necessary Python libraries
 │
-├── Trading_App.py              # The main homepage of the app
-├── requirements.txt            # A list of all necessary Python libraries
+├── pages/                 # Contains all app pages
+│   ├── 1_Stock_Analysis.py    # "Report Card" page
+│   ├── 2_Stock_Prediction.py  # "Forecast" page
+│   └── 3_CAPM_Analysis.py     # "Risk vs. Reward" page
 │
-└── pages/                      # This folder holds all the other app pages
-    ├── 1_Stock_Analysis.py     # Code for the "Report Card" page
-    ├── 2_Stock_Prediction.py   # Code for the "Forecast" page
-    ├── 3_CAPM_Analysis.py      # Code for the "Risk vs. Reward" page
-    │
-    └── utils/                  # A folder for helper functions
-        ├── __init__.py         # Makes 'utils' a Python package
-        ├── capm_logic.py       # Functions for CAPM calculations
-        ├── model_train.py      # Logic for the forecasting model
-        └── plotly_figure.py    # Functions that create the charts
+├── utils/                 # Helper functions
+│   ├── __init__.py        # Makes 'utils' a package
+│   ├── capm_logic.py      # CAPM calculations
+│   ├── model_train.py     # Forecasting model logic
+│   └── plotly_figure.py   # Chart creation functions
+
 
 
 For Developers: How to Run This on Your Computer
