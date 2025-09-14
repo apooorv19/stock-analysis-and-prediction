@@ -1,0 +1,11 @@
+python==3.11
+streamlit
+pandas
+yfinance
+pandas-datareader
+plotly
+numpy
+statsmodels
+scikit-learn
+ta
+python-dateutil
