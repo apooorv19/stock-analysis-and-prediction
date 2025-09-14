@@ -2,6 +2,14 @@ Stock Analysis & Prediction Dashboard 📈
 
 🚀 [View the Live Application Here!](https://stock-analysis-and-prediction-apooorv19.streamlit.app/)
 
+![CAPM Page](https://ibb.co/KcF5RXVz)
+
+![Stock Analysis Page](https://ibb.co/JwdZRFm7)
+
+![Stock Analysis Visulaization Page](https://ibb.co/vmQ3XcCb)
+
+![Stock Prediction Page](https://ibb.co/5xhT92tm)
+
 What Can You Do With This App?
 
 I've split the app into three simple tools:
@@ -12,6 +20,27 @@ I've split the app into three simple tools:
 
 3. 💹 CAPM Analysis
 
+📂 Project Structure
+
+The project is organized in a modular way that is easy to understand and maintain. This is the standard structure for a multi-page Streamlit application.
+
+trading-app/
+│
+├── Trading_App.py              # The main homepage of the app
+├── requirements.txt            # A list of all necessary Python libraries
+│
+└── pages/                      # This folder holds all the other app pages
+    ├── 1_Stock_Analysis.py     # Code for the "Report Card" page
+    ├── 2_Stock_Prediction.py   # Code for the "Forecast" page
+    ├── 3_CAPM_Analysis.py      # Code for the "Risk vs. Reward" page
+    │
+    └── utils/                  # A folder for helper functions
+        ├── __init__.py         # Makes 'utils' a Python package
+        ├── capm_logic.py       # Functions for CAPM calculations
+        ├── model_train.py      # Logic for the forecasting model
+        └── plotly_figure.py    # Functions that create the charts
+
+
 For Developers: How to Run This on Your Computer
 
 If you're a fellow coder and want to run this project yourself, here’s how:
@@ -20,6 +49,7 @@ If you're a fellow coder and want to run this project yourself, here’s how:
 This command copies all the project files to your machine.
 
 git clone [https://github.com/apooorv19/Stock-Analysis-and-Prediction.git](https://github.com/apooorv19/Stock-Analysis-and-Prediction.git)
+
 cd Stock-Analysis-and-Prediction
 
 2. Install the Required Tools
