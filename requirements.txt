@@ -9,3 +9,4 @@ statsmodels
 scikit-learn
 ta
 python-dateutil
+arch
