@@ -1,4 +1,4 @@
-python==3.11
+python-dateutil
 streamlit
 pandas
 yfinance
@@ -9,3 +9,5 @@ statsmodels
 scikit-learn
 ta
 python-dateutil
+setuptools
+arch

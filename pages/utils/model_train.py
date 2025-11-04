@@ -6,6 +6,7 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 from datetime import datetime, timedelta
 import pandas as pd
+from arch import arch_model
 
 def get_data(ticker):
     stock_data = yf.download(ticker, start='2024-01-01')
@@ -64,3 +65,45 @@ def get_forecast(original_price, differencing_order):
 def inverse_scaling(scaler, scaled_data):
     close_price = scaler.inverse_transform(np.array(scaled_data).reshape(-1, 1))
     return close_price
+
+# ----------------------------------------------------------------------
+# NEW FUNCTIONS FOR GARCH (Module 4)
+# ----------------------------------------------------------------------
+
+def get_daily_returns(close_price):
+    """Calculates daily percentage returns, which are required for GARCH modeling."""
+    # Calculates the percentage change and drops the first NaN value
+    returns = 100 * close_price.pct_change().dropna()
+    return returns
+
+def fit_garch_model(returns, p=1, q=1, forecast_steps=30):
+    """
+    Fits a GARCH(p, q) model to the daily returns and forecasts conditional volatility.
+    
+    The ARCH model is a special case of GARCH(q, 0).
+    """
+    # Use the arch_model function, specifying GARCH(p, q)
+    # The default distribution is 'normal', and mean model is 'Constant Mean'
+    gm = arch_model(returns, vol='Garch', p=p, q=q, rescale=False)
+    
+    # Fit the model
+    res = gm.fit(disp='off')
+    
+    # Forecast conditional variance (volatility squared)
+    forecasts = res.forecast(horizon=forecast_steps, reindex=False)
+    
+    # Extract the forecasted conditional standard deviation (volatility)
+    conditional_volatility = np.sqrt(forecasts.variance.values[-1, :])
+    
+    # Create an index for the next 30 days
+    start_date = datetime.now()
+    forecast_index = pd.date_range(start=start_date, periods=forecast_steps, freq='D')
+    
+    # Create a DataFrame for the forecast
+    volatility_forecast_df = pd.DataFrame(
+        conditional_volatility, 
+        index=forecast_index, 
+        columns=['Forecasted Volatility']
+    )
+    
+    return volatility_forecast_df, res

@@ -29,7 +29,6 @@ with col3:
 st.subheader(ticker)
 
 stock = yf.Ticker(ticker)
-    
 st.write(stock.info['longBusinessSummary'])
 st.write("**Sector:**", stock.info['sector'])
 st.write("**Full Time Employees:**", stock.info['fullTimeEmployees'])

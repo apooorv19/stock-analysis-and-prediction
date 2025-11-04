@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from pages.utils.model_train import get_data, get_rolling_mean, get_differencing_order, scaling, evaluate_model, get_forecast, inverse_scaling
+from pages.utils.model_train import get_data, get_rolling_mean, get_differencing_order, scaling, evaluate_model, get_forecast, inverse_scaling, get_daily_returns, fit_garch_model
 from pages.utils.plotly_figure import plotly_table, Moving_average_forecast
 
 st.set_page_config(
@@ -43,6 +43,26 @@ if ticker:
             # --- Display Forecast Data Table ---
             st.write("#### Forecast Data (Next 30 days)")
             st.plotly_chart(plotly_table(forecast_df.round(2)), use_container_width=True)
+            
+            # NEW GARCH IMPLEMENTATION FOR VOLATILITY (Module 4)
+# --------------------------------------------------------------------------
+
+            # 1. Prepare data (daily returns are required for GARCH)
+            returns = get_daily_returns(close_price['Close'])
+
+            # 2. Fit and forecast GARCH(1,1) model (p=1, q=1 are common starting points)
+            volatility_forecast_df, garch_results = fit_garch_model(returns, p=1, q=1)
+
+            # 3. Display GARCH Results (e.g., model parameters)
+            st.write("### GARCH Model Results (Volatility Forecast)")
+            st.write(f"**Model:** GARCH({garch_results.p}, {garch_results.q})")
+            st.write(f"**Log-Likelihood:** {garch_results.loglikelihood:.4f}")
+            st.write(f"**AIC/BIC:** {garch_results.aic:.2f} / {garch_results.bic:.2f}")
+
+            # 4. Display Volatility Forecast Table
+            st.write("#### Forecasted Volatility (Next 30 days)")
+            # We use the existing plotly_table to display the volatility forecast
+            st.plotly_chart(plotly_table(volatility_forecast_df.round(4)), use_container_width=True)
 
             # --- Display Forecast Chart ---
             # FIX: Plot the ORIGINAL historical close price, not the rolling average.
