@@ -1,0 +1,4 @@
+setup(
+    ...
+    python_requires=">=3.11,<3.12",
+)
