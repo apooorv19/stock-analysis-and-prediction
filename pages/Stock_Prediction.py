@@ -52,10 +52,12 @@ if ticker:
 
             # 2. Fit and forecast GARCH(1,1) model (p=1, q=1 are common starting points)
             volatility_forecast_df, garch_results = fit_garch_model(returns, p=1, q=1)
-
+            
             # 3. Display GARCH Results (e.g., model parameters)
             st.write("### GARCH Model Results (Volatility Forecast)")
-            st.write(f"**Model:** GARCH({garch_results.p}, {garch_results.q})")
+
+            # FIX: Access p and q through the .model attribute of the results object
+            st.write(f"**Model:** GARCH({garch_results.model.p}, {garch_results.model.q})") 
             st.write(f"**Log-Likelihood:** {garch_results.loglikelihood:.4f}")
             st.write(f"**AIC/BIC:** {garch_results.aic:.2f} / {garch_results.bic:.2f}")
 
