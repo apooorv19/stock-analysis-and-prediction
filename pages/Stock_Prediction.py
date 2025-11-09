@@ -57,7 +57,8 @@ if ticker:
             st.write("### GARCH Model Results (Volatility Forecast)")
 
             # FIX: Access p and q through the .model attribute of the results object
-            st.write(f"**Model:** GARCH({garch_results.model.p}, {garch_results.model.q})") 
+            # FIX: Access p and q through the .model.volatility attributes
+            st.write(f"**Model:** GARCH({garch_results.model.volatility.p}, {garch_results.model.volatility.q})") 
             st.write(f"**Log-Likelihood:** {garch_results.loglikelihood:.4f}")
             st.write(f"**AIC/BIC:** {garch_results.aic:.2f} / {garch_results.bic:.2f}")
 
